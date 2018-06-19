@@ -1,0 +1,4298 @@
+%!PS-Adobe-2.0
+%%Title: spectrad.eps
+%%Creator: gnuplot 4.2 patchlevel 4 
+%%CreationDate: Sun Nov  8 11:51:25 2009
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 554 770
+%%Orientation: Landscape
+%%Pages: (atend)
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following 6 true/false flags may be edited by hand if required
+% The unit line width may also be changed
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape true def
+/Level1 false def
+/Rounded false def
+/TransparentPatterns false def
+/gnulinewidth 10.000 def
+/userlinewidth gnulinewidth def
+%
+/vshift -46 def
+/dl1 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+Level1 {} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (spectrad.eps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 4.2 patchlevel 4 )
+  /Author (Hudson,,,)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Sun Nov  8 11:51:25 2009)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Gnuplot Prolog Version 4.2 (August 2006)
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+% Default Line colors
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default Line Types
+/LTw {PL [] 1 setgray} def
+/LTb {BL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [4 dl1 2 dl2] LC1 DL} def
+/LT2 {PL [2 dl1 3 dl2] LC2 DL} def
+/LT3 {PL [1 dl1 1.5 dl2] LC3 DL} def
+/LT4 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC5 DL} def
+/LT6 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 2 dl2 2 dl1 4 dl2] LC8 DL} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  gsave 1 setgray fill grestore clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+ 2 lt
+	{/InterpretLevel1 true def}
+	{/InterpretLevel1 Level1 def}
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {show} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
+     dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
+     show 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} bind def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get stringwidth pop add} {pop} ifelse} ifelse} forall} bind def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+50 50 translate
+0.100 0.100 scale
+90 rotate
+0 -5040 translate
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+1.000 UL
+LTb
+882 448 M
+63 0 V
+6101 0 R
+-63 0 V
+stroke
+798 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MRshow
+1.000 UL
+LTb
+882 1080 M
+63 0 V
+6101 0 R
+-63 0 V
+stroke
+798 1080 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 20)]
+] -46.7 MRshow
+1.000 UL
+LTb
+882 1712 M
+63 0 V
+6101 0 R
+-63 0 V
+stroke
+798 1712 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 40)]
+] -46.7 MRshow
+1.000 UL
+LTb
+882 2344 M
+63 0 V
+6101 0 R
+-63 0 V
+stroke
+798 2344 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 60)]
+] -46.7 MRshow
+1.000 UL
+LTb
+882 2976 M
+63 0 V
+6101 0 R
+-63 0 V
+stroke
+798 2976 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 80)]
+] -46.7 MRshow
+1.000 UL
+LTb
+882 3608 M
+63 0 V
+6101 0 R
+-63 0 V
+stroke
+798 3608 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 100)]
+] -46.7 MRshow
+1.000 UL
+LTb
+882 4240 M
+63 0 V
+6101 0 R
+-63 0 V
+stroke
+798 4240 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 120)]
+] -46.7 MRshow
+1.000 UL
+LTb
+882 4872 M
+63 0 V
+6101 0 R
+-63 0 V
+stroke
+798 4872 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 140)]
+] -46.7 MRshow
+1.000 UL
+LTb
+882 448 M
+0 63 V
+0 4361 R
+0 -63 V
+stroke
+882 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.02)]
+] -46.7 MCshow
+1.000 UL
+LTb
+1653 448 M
+0 63 V
+0 4361 R
+0 -63 V
+stroke
+1653 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.01)]
+] -46.7 MCshow
+1.000 UL
+LTb
+2423 448 M
+0 63 V
+0 4361 R
+0 -63 V
+stroke
+2423 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MCshow
+1.000 UL
+LTb
+3194 448 M
+0 63 V
+0 4361 R
+0 -63 V
+stroke
+3194 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.01)]
+] -46.7 MCshow
+1.000 UL
+LTb
+3964 448 M
+0 63 V
+0 4361 R
+0 -63 V
+stroke
+3964 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.02)]
+] -46.7 MCshow
+1.000 UL
+LTb
+4734 448 M
+0 63 V
+0 4361 R
+0 -63 V
+stroke
+4734 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.03)]
+] -46.7 MCshow
+1.000 UL
+LTb
+5505 448 M
+0 63 V
+0 4361 R
+0 -63 V
+stroke
+5505 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.04)]
+] -46.7 MCshow
+1.000 UL
+LTb
+6276 448 M
+0 63 V
+0 4361 R
+0 -63 V
+stroke
+6276 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.05)]
+] -46.7 MCshow
+1.000 UL
+LTb
+7046 448 M
+0 63 V
+0 4361 R
+0 -63 V
+stroke
+7046 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.06)]
+] -46.7 MCshow
+1.000 UL
+LTb
+1.000 UL
+LTb
+882 4872 N
+882 448 L
+6164 0 V
+0 4424 V
+-6164 0 V
+Z stroke
+LCb setrgbcolor
+308 2660 M
+currentpoint gsave translate 90 rotate 0 0 moveto
+[ [(Symbol) 140.0 0.0 true true 0 (r)]
+] -46.7 MCshow
+grestore
+LTb
+LCb setrgbcolor
+3964 98 M
+[ [(Symbol) 140.0 0.0 true true 0 (e)]
+] -46.7 MCshow
+LTb
+1.000 UP
+1.000 UL
+LTb
+1.000 UL
+LT7
+LTb
+6395 4739 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( )]
+] -46.7 MRshow
+LT7
+1605 475 TriU
+2339 504 TriU
+2415 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2430 510 TriU
+2493 516 TriU
+3081 631 TriU
+4077 3449 TriU
+1624 475 TriU
+2341 504 TriU
+2415 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2430 510 TriU
+2491 516 TriU
+3068 625 TriU
+4070 3539 TriU
+1641 475 TriU
+2343 504 TriU
+2415 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2430 510 TriU
+2490 516 TriU
+3054 621 TriU
+4064 3626 TriU
+1659 476 TriU
+2345 504 TriU
+2415 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2430 510 TriU
+2488 515 TriU
+3041 616 TriU
+4058 3710 TriU
+1676 476 TriU
+2346 504 TriU
+2415 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2429 510 TriU
+2487 515 TriU
+3028 612 TriU
+4052 3791 TriU
+1693 477 TriU
+2348 504 TriU
+2415 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2429 510 TriU
+2485 515 TriU
+3016 607 TriU
+4045 3869 TriU
+1709 477 TriU
+2350 504 TriU
+2416 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2429 510 TriU
+2484 515 TriU
+3003 603 TriU
+4040 3943 TriU
+1725 478 TriU
+2351 505 TriU
+2416 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2429 510 TriU
+2483 515 TriU
+2991 600 TriU
+4034 4013 TriU
+1740 478 TriU
+2353 505 TriU
+2416 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2429 510 TriU
+2481 515 TriU
+2979 596 TriU
+4028 4078 TriU
+1756 478 TriU
+2355 505 TriU
+2416 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2429 510 TriU
+2480 515 TriU
+2967 593 TriU
+4022 4140 TriU
+1771 479 TriU
+2356 505 TriU
+2416 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2429 510 TriU
+2479 515 TriU
+2956 590 TriU
+4017 4196 TriU
+1785 479 TriU
+2358 505 TriU
+2416 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2428 510 TriU
+2477 514 TriU
+2944 587 TriU
+4011 4248 TriU
+1799 480 TriU
+2359 505 TriU
+2417 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2428 510 TriU
+2476 514 TriU
+2933 584 TriU
+4006 4295 TriU
+1813 480 TriU
+2361 505 TriU
+2417 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2428 510 TriU
+2475 514 TriU
+2922 581 TriU
+4001 4336 TriU
+1827 480 TriU
+2362 505 TriU
+2417 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2428 510 TriU
+2474 514 TriU
+2912 578 TriU
+3995 4373 TriU
+1840 481 TriU
+2363 505 TriU
+2417 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2428 510 TriU
+2473 514 TriU
+2901 576 TriU
+3990 4403 TriU
+1853 481 TriU
+2365 506 TriU
+2417 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2428 510 TriU
+2472 514 TriU
+2891 574 TriU
+3985 4428 TriU
+1866 482 TriU
+2366 506 TriU
+2417 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2428 510 TriU
+2470 514 TriU
+2881 571 TriU
+3980 4448 TriU
+1879 482 TriU
+2367 506 TriU
+2417 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2428 510 TriU
+2469 514 TriU
+2871 569 TriU
+3975 4461 TriU
+1891 482 TriU
+2369 506 TriU
+2418 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2428 510 TriU
+2468 514 TriU
+2861 567 TriU
+3969 4469 TriU
+1903 483 TriU
+2370 506 TriU
+2418 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2427 510 TriU
+2467 514 TriU
+2852 565 TriU
+3964 4471 TriU
+1914 483 TriU
+2371 506 TriU
+2418 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2427 510 TriU
+2466 513 TriU
+2842 563 TriU
+3959 4468 TriU
+1926 484 TriU
+2372 506 TriU
+2418 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2427 510 TriU
+2465 513 TriU
+2833 561 TriU
+3954 4458 TriU
+1937 484 TriU
+2373 506 TriU
+2418 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2427 510 TriU
+2464 513 TriU
+2824 560 TriU
+3949 4443 TriU
+1948 484 TriU
+2375 506 TriU
+2418 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2427 510 TriU
+2463 513 TriU
+2815 558 TriU
+3944 4422 TriU
+1958 485 TriU
+2376 506 TriU
+2418 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2427 510 TriU
+2462 513 TriU
+2807 556 TriU
+3938 4396 TriU
+6964 465 TriU
+1969 485 TriU
+2377 506 TriU
+2418 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2427 510 TriU
+2462 513 TriU
+2798 555 TriU
+3933 4364 TriU
+6867 466 TriU
+1979 486 TriU
+2378 506 TriU
+2418 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2427 510 TriU
+2461 513 TriU
+2790 553 TriU
+3928 4326 TriU
+6773 467 TriU
+1989 486 TriU
+2379 507 TriU
+2419 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2427 510 TriU
+2460 513 TriU
+2782 552 TriU
+3923 4284 TriU
+6681 468 TriU
+1999 486 TriU
+2380 507 TriU
+2419 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2427 510 TriU
+2459 513 TriU
+2774 551 TriU
+3917 4236 TriU
+6592 470 TriU
+2008 487 TriU
+2381 507 TriU
+2419 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2427 510 TriU
+2458 513 TriU
+2766 549 TriU
+3912 4184 TriU
+6504 471 TriU
+2017 487 TriU
+2382 507 TriU
+2419 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2426 510 TriU
+2457 513 TriU
+2759 548 TriU
+3906 4127 TriU
+6419 473 TriU
+2027 487 TriU
+2383 507 TriU
+2419 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2426 510 TriU
+2457 513 TriU
+2752 547 TriU
+3901 4065 TriU
+6336 474 TriU
+2035 488 TriU
+2384 507 TriU
+2419 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2426 510 TriU
+2456 513 TriU
+2744 546 TriU
+3895 3999 TriU
+6255 476 TriU
+2044 488 TriU
+2385 507 TriU
+2419 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2426 510 TriU
+2455 513 TriU
+2737 545 TriU
+3889 3930 TriU
+6176 478 TriU
+2053 488 TriU
+2385 507 TriU
+2419 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2426 510 TriU
+2454 512 TriU
+2730 544 TriU
+3884 3856 TriU
+6099 481 TriU
+2061 489 TriU
+2386 507 TriU
+2419 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2426 510 TriU
+2454 512 TriU
+2723 543 TriU
+3878 3780 TriU
+6024 483 TriU
+2069 489 TriU
+2387 507 TriU
+2419 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2426 510 TriU
+2453 512 TriU
+2717 542 TriU
+3872 3700 TriU
+5951 486 TriU
+2077 490 TriU
+2388 507 TriU
+2419 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2426 510 TriU
+2452 512 TriU
+2710 541 TriU
+3866 3617 TriU
+5879 488 TriU
+2085 490 TriU
+2389 507 TriU
+2420 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2426 510 TriU
+2452 512 TriU
+2704 540 TriU
+3859 3532 TriU
+5810 491 TriU
+2092 490 TriU
+2389 507 TriU
+2420 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2426 510 TriU
+2451 512 TriU
+2698 539 TriU
+3853 3444 TriU
+5743 495 TriU
+2100 491 TriU
+2390 507 TriU
+2420 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2426 510 TriU
+2450 512 TriU
+2691 538 TriU
+3846 3355 TriU
+5677 498 TriU
+2107 491 TriU
+2391 507 TriU
+2420 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2426 510 TriU
+2450 512 TriU
+2685 537 TriU
+3840 3264 TriU
+5613 502 TriU
+2114 491 TriU
+2392 507 TriU
+2420 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2426 510 TriU
+2449 512 TriU
+2680 536 TriU
+3833 3172 TriU
+5551 507 TriU
+2121 491 TriU
+2392 508 TriU
+2420 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2426 510 TriU
+2448 512 TriU
+2674 536 TriU
+3826 3078 TriU
+5490 511 TriU
+2128 492 TriU
+2393 508 TriU
+2420 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2448 512 TriU
+2668 535 TriU
+3818 2985 TriU
+5431 516 TriU
+2135 492 TriU
+2394 508 TriU
+2420 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2447 512 TriU
+2663 534 TriU
+3811 2890 TriU
+5374 522 TriU
+2141 492 TriU
+2394 508 TriU
+2420 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2447 512 TriU
+2657 534 TriU
+3803 2796 TriU
+5319 528 TriU
+2147 493 TriU
+2395 508 TriU
+2420 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2446 512 TriU
+2652 533 TriU
+3795 2702 TriU
+5265 535 TriU
+2154 493 TriU
+2396 508 TriU
+2420 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2446 512 TriU
+2647 532 TriU
+3787 2609 TriU
+5213 542 TriU
+2160 493 TriU
+2396 508 TriU
+2420 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2445 512 TriU
+2642 532 TriU
+3779 2517 TriU
+5162 550 TriU
+2166 494 TriU
+2397 508 TriU
+2420 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2445 512 TriU
+2637 531 TriU
+3770 2426 TriU
+5113 559 TriU
+2171 494 TriU
+2398 508 TriU
+2420 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2444 512 TriU
+2632 530 TriU
+3761 2336 TriU
+5065 568 TriU
+2177 494 TriU
+2398 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2444 512 TriU
+2628 530 TriU
+3752 2248 TriU
+5019 579 TriU
+2183 495 TriU
+2399 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2443 512 TriU
+2623 529 TriU
+3742 2161 TriU
+4975 590 TriU
+2188 495 TriU
+2399 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2443 511 TriU
+2619 529 TriU
+3733 2077 TriU
+4932 602 TriU
+2193 495 TriU
+2400 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2442 511 TriU
+2614 528 TriU
+3722 1995 TriU
+4890 616 TriU
+2198 495 TriU
+2400 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2442 511 TriU
+2610 528 TriU
+3712 1916 TriU
+4850 631 TriU
+2204 496 TriU
+2401 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2441 511 TriU
+2606 527 TriU
+3701 1839 TriU
+4811 647 TriU
+2208 496 TriU
+2401 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2441 511 TriU
+2602 527 TriU
+3690 1765 TriU
+4774 665 TriU
+2213 496 TriU
+2402 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2441 511 TriU
+2598 526 TriU
+3679 1694 TriU
+4738 685 TriU
+2218 496 TriU
+2402 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2440 511 TriU
+2594 526 TriU
+3667 1625 TriU
+4704 706 TriU
+2223 497 TriU
+2403 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2440 511 TriU
+2590 526 TriU
+3655 1560 TriU
+4671 729 TriU
+2227 497 TriU
+2403 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2439 511 TriU
+2586 525 TriU
+3642 1498 TriU
+4639 754 TriU
+2232 497 TriU
+2404 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2439 511 TriU
+2582 525 TriU
+3629 1438 TriU
+4609 781 TriU
+2236 497 TriU
+2404 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2439 511 TriU
+2579 524 TriU
+3616 1382 TriU
+4580 811 TriU
+2240 498 TriU
+2405 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2438 511 TriU
+2575 524 TriU
+3602 1329 TriU
+4552 843 TriU
+2244 498 TriU
+2405 508 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2425 510 TriU
+2438 511 TriU
+2572 524 TriU
+3589 1278 TriU
+4525 878 TriU
+2248 498 TriU
+2405 509 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2438 511 TriU
+2569 523 TriU
+3574 1231 TriU
+4500 915 TriU
+2252 498 TriU
+2406 509 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2437 511 TriU
+2565 523 TriU
+3560 1186 TriU
+4475 955 TriU
+2256 499 TriU
+2406 509 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2437 511 TriU
+2562 523 TriU
+3545 1144 TriU
+4452 998 TriU
+2260 499 TriU
+2407 509 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2437 511 TriU
+2559 522 TriU
+3530 1105 TriU
+4430 1045 TriU
+886 464 TriU
+2264 499 TriU
+2407 509 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2436 511 TriU
+2556 522 TriU
+3515 1068 TriU
+4409 1094 TriU
+921 464 TriU
+2267 499 TriU
+2407 509 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2436 511 TriU
+2553 522 TriU
+3500 1033 TriU
+4388 1146 TriU
+954 464 TriU
+2271 499 TriU
+2408 509 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2436 511 TriU
+2550 521 TriU
+3484 1001 TriU
+4369 1202 TriU
+987 465 TriU
+2274 500 TriU
+2408 509 TriU
+2421 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2435 511 TriU
+2547 521 TriU
+3468 971 TriU
+4351 1261 TriU
+1019 465 TriU
+2277 500 TriU
+2408 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2435 511 TriU
+2544 521 TriU
+3452 943 TriU
+4334 1324 TriU
+1050 466 TriU
+2281 500 TriU
+2409 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2435 511 TriU
+2542 520 TriU
+3436 917 TriU
+4317 1389 TriU
+1080 466 TriU
+2284 500 TriU
+2409 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2435 511 TriU
+2539 520 TriU
+3420 893 TriU
+4301 1458 TriU
+1110 466 TriU
+2287 500 TriU
+2409 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2434 511 TriU
+2536 520 TriU
+3404 870 TriU
+4286 1530 TriU
+1140 467 TriU
+2290 501 TriU
+2410 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2434 511 TriU
+2534 520 TriU
+3388 849 TriU
+4272 1605 TriU
+1168 467 TriU
+2293 501 TriU
+2410 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2434 511 TriU
+2531 519 TriU
+3371 830 TriU
+4258 1684 TriU
+1196 467 TriU
+2296 501 TriU
+2410 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2434 511 TriU
+2529 519 TriU
+3355 811 TriU
+4245 1765 TriU
+1223 468 TriU
+2299 501 TriU
+2411 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2433 511 TriU
+2526 519 TriU
+3339 794 TriU
+4232 1849 TriU
+1250 468 TriU
+2302 501 TriU
+2411 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2433 511 TriU
+2524 519 TriU
+3323 779 TriU
+4221 1935 TriU
+1276 469 TriU
+2305 502 TriU
+2411 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2433 511 TriU
+2522 518 TriU
+3307 764 TriU
+4209 2024 TriU
+1302 469 TriU
+2307 502 TriU
+2411 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2433 511 TriU
+2519 518 TriU
+3291 750 TriU
+4198 2115 TriU
+1327 469 TriU
+2310 502 TriU
+2412 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2432 511 TriU
+2517 518 TriU
+3275 737 TriU
+4188 2208 TriU
+1351 470 TriU
+2312 502 TriU
+2412 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2432 511 TriU
+2515 518 TriU
+3259 725 TriU
+4178 2302 TriU
+1375 470 TriU
+2315 502 TriU
+2412 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2432 511 TriU
+2513 518 TriU
+3243 714 TriU
+4168 2398 TriU
+1398 471 TriU
+2317 502 TriU
+2412 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2432 511 TriU
+2511 517 TriU
+3228 704 TriU
+4159 2495 TriU
+1421 471 TriU
+2320 502 TriU
+2413 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2432 511 TriU
+2509 517 TriU
+3212 694 TriU
+4150 2593 TriU
+1444 471 TriU
+2322 503 TriU
+2413 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2431 511 TriU
+2507 517 TriU
+3197 685 TriU
+4141 2692 TriU
+1465 472 TriU
+2324 503 TriU
+2413 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2431 511 TriU
+2505 517 TriU
+3182 677 TriU
+4133 2791 TriU
+1487 472 TriU
+2327 503 TriU
+2413 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2431 511 TriU
+2503 517 TriU
+3167 669 TriU
+4125 2890 TriU
+1508 473 TriU
+2329 503 TriU
+2414 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2431 511 TriU
+2502 517 TriU
+3152 661 TriU
+4117 2988 TriU
+1528 473 TriU
+2331 503 TriU
+2414 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2431 511 TriU
+2500 516 TriU
+3138 654 TriU
+4110 3086 TriU
+1548 473 TriU
+2333 503 TriU
+2414 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2431 510 TriU
+2498 516 TriU
+3123 647 TriU
+4102 3183 TriU
+1567 474 TriU
+2335 504 TriU
+2414 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2430 510 TriU
+2496 516 TriU
+3109 641 TriU
+4095 3278 TriU
+1587 474 TriU
+2337 504 TriU
+2414 509 TriU
+2422 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 508 TriU
+2423 513 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2423 510 TriU
+2424 510 TriU
+2430 510 TriU
+2495 516 TriU
+3095 635 TriU
+4089 3372 TriU
+6678 4739 TriU
+1.000 UL
+LT2
+LTb
+6395 4599 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( )]
+] -46.7 MRshow
+LT2
+1605 475 Dia
+2339 504 Dia
+2415 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2430 510 Dia
+2493 516 Dia
+3081 631 Dia
+4077 3456 Dia
+1624 475 Dia
+2341 504 Dia
+2415 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2430 510 Dia
+2491 516 Dia
+3068 625 Dia
+4070 3547 Dia
+1641 475 Dia
+2343 504 Dia
+2415 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2430 510 Dia
+2490 516 Dia
+3054 621 Dia
+4064 3634 Dia
+1659 476 Dia
+2345 504 Dia
+2415 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2430 510 Dia
+2488 515 Dia
+3041 616 Dia
+4058 3719 Dia
+1676 476 Dia
+2346 504 Dia
+2415 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2429 510 Dia
+2487 515 Dia
+3028 611 Dia
+4052 3801 Dia
+1693 477 Dia
+2348 504 Dia
+2415 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2429 510 Dia
+2485 515 Dia
+3016 607 Dia
+4045 3880 Dia
+1709 477 Dia
+2350 504 Dia
+2416 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2429 510 Dia
+2484 515 Dia
+3003 603 Dia
+4040 3955 Dia
+1725 478 Dia
+2351 505 Dia
+2416 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2429 510 Dia
+2483 515 Dia
+2991 600 Dia
+4034 4025 Dia
+1740 478 Dia
+2353 505 Dia
+2416 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2429 510 Dia
+2481 515 Dia
+2979 596 Dia
+4028 4092 Dia
+1756 478 Dia
+2355 505 Dia
+2416 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2429 510 Dia
+2480 515 Dia
+2967 593 Dia
+4022 4154 Dia
+1771 479 Dia
+2356 505 Dia
+2416 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2429 510 Dia
+2479 515 Dia
+2956 590 Dia
+4017 4212 Dia
+1785 479 Dia
+2358 505 Dia
+2416 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2428 510 Dia
+2477 514 Dia
+2944 587 Dia
+4011 4264 Dia
+1799 480 Dia
+2359 505 Dia
+2417 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2428 510 Dia
+2476 514 Dia
+2933 584 Dia
+4006 4312 Dia
+1813 480 Dia
+2361 505 Dia
+2417 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2428 510 Dia
+2475 514 Dia
+2922 581 Dia
+4001 4354 Dia
+1827 480 Dia
+2362 505 Dia
+2417 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2428 510 Dia
+2474 514 Dia
+2912 578 Dia
+3995 4391 Dia
+1840 481 Dia
+2363 505 Dia
+2417 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2428 510 Dia
+2473 514 Dia
+2901 576 Dia
+3990 4422 Dia
+1853 481 Dia
+2365 506 Dia
+2417 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2428 510 Dia
+2472 514 Dia
+2891 574 Dia
+3985 4448 Dia
+1866 482 Dia
+2366 506 Dia
+2417 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2428 510 Dia
+2470 514 Dia
+2881 571 Dia
+3980 4468 Dia
+1879 482 Dia
+2367 506 Dia
+2417 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2428 510 Dia
+2469 514 Dia
+2871 569 Dia
+3975 4482 Dia
+1891 482 Dia
+2369 506 Dia
+2418 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2428 510 Dia
+2468 514 Dia
+2861 567 Dia
+3969 4490 Dia
+1903 483 Dia
+2370 506 Dia
+2418 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2427 510 Dia
+2467 514 Dia
+2852 565 Dia
+3964 4493 Dia
+1914 483 Dia
+2371 506 Dia
+2418 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2427 510 Dia
+2466 513 Dia
+2842 563 Dia
+3959 4489 Dia
+1926 484 Dia
+2372 506 Dia
+2418 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2427 510 Dia
+2465 513 Dia
+2833 561 Dia
+3954 4480 Dia
+1937 484 Dia
+2373 506 Dia
+2418 509 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2427 510 Dia
+2464 513 Dia
+2824 560 Dia
+3949 4465 Dia
+1948 484 Dia
+2375 506 Dia
+2418 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2427 510 Dia
+2463 513 Dia
+2815 558 Dia
+3944 4444 Dia
+1958 485 Dia
+2376 506 Dia
+2418 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2427 510 Dia
+2462 513 Dia
+2807 556 Dia
+3938 4418 Dia
+6964 465 Dia
+1969 485 Dia
+2377 506 Dia
+2418 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2427 510 Dia
+2462 513 Dia
+2798 555 Dia
+3933 4385 Dia
+6867 466 Dia
+1979 486 Dia
+2378 506 Dia
+2418 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2427 510 Dia
+2461 513 Dia
+2790 553 Dia
+3928 4348 Dia
+6773 467 Dia
+1989 486 Dia
+2379 507 Dia
+2419 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2427 510 Dia
+2460 513 Dia
+2782 552 Dia
+3923 4305 Dia
+6681 468 Dia
+1999 486 Dia
+2380 507 Dia
+2419 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2427 510 Dia
+2459 513 Dia
+2774 551 Dia
+3917 4257 Dia
+6592 470 Dia
+2008 487 Dia
+2381 507 Dia
+2419 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2427 510 Dia
+2458 513 Dia
+2766 549 Dia
+3912 4205 Dia
+6504 471 Dia
+2017 487 Dia
+2382 507 Dia
+2419 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2426 510 Dia
+2457 513 Dia
+2759 548 Dia
+3906 4147 Dia
+6419 473 Dia
+2027 487 Dia
+2383 507 Dia
+2419 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2426 510 Dia
+2457 513 Dia
+2752 547 Dia
+3901 4085 Dia
+6336 474 Dia
+2035 488 Dia
+2384 507 Dia
+2419 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2426 510 Dia
+2456 513 Dia
+2744 546 Dia
+3895 4019 Dia
+6255 476 Dia
+2044 488 Dia
+2385 507 Dia
+2419 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2426 510 Dia
+2455 513 Dia
+2737 545 Dia
+3889 3948 Dia
+6176 478 Dia
+2053 488 Dia
+2385 507 Dia
+2419 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2426 510 Dia
+2454 512 Dia
+2730 544 Dia
+3884 3874 Dia
+6099 481 Dia
+2061 489 Dia
+2386 507 Dia
+2419 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2426 510 Dia
+2454 512 Dia
+2723 543 Dia
+3878 3797 Dia
+6024 483 Dia
+2069 489 Dia
+2387 507 Dia
+2419 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2426 510 Dia
+2453 512 Dia
+2717 542 Dia
+3872 3716 Dia
+5951 486 Dia
+2077 490 Dia
+2388 507 Dia
+2419 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2426 510 Dia
+2452 512 Dia
+2710 541 Dia
+3866 3633 Dia
+5879 488 Dia
+2085 490 Dia
+2389 507 Dia
+2420 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2426 510 Dia
+2452 512 Dia
+2704 540 Dia
+3859 3547 Dia
+5810 491 Dia
+2092 490 Dia
+2389 507 Dia
+2420 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2426 510 Dia
+2451 512 Dia
+2698 539 Dia
+3853 3459 Dia
+5743 495 Dia
+2100 491 Dia
+2390 507 Dia
+2420 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2426 510 Dia
+2450 512 Dia
+2691 538 Dia
+3846 3369 Dia
+5677 498 Dia
+2107 491 Dia
+2391 507 Dia
+2420 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2426 510 Dia
+2450 512 Dia
+2685 537 Dia
+3840 3277 Dia
+5613 502 Dia
+2114 491 Dia
+2392 507 Dia
+2420 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2426 510 Dia
+2449 512 Dia
+2680 536 Dia
+3833 3184 Dia
+5551 507 Dia
+2121 491 Dia
+2392 508 Dia
+2420 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2426 510 Dia
+2448 512 Dia
+2674 536 Dia
+3826 3090 Dia
+5490 511 Dia
+2128 492 Dia
+2393 508 Dia
+2420 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2448 512 Dia
+2668 535 Dia
+3818 2995 Dia
+5431 516 Dia
+2135 492 Dia
+2394 508 Dia
+2420 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2447 512 Dia
+2663 534 Dia
+3811 2901 Dia
+5374 522 Dia
+2141 492 Dia
+2394 508 Dia
+2420 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2447 512 Dia
+2657 534 Dia
+3803 2806 Dia
+5319 528 Dia
+2147 493 Dia
+2395 508 Dia
+2420 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2446 512 Dia
+2652 533 Dia
+3795 2711 Dia
+5265 535 Dia
+2154 493 Dia
+2396 508 Dia
+2420 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2446 512 Dia
+2647 532 Dia
+3787 2617 Dia
+5213 542 Dia
+2160 493 Dia
+2396 508 Dia
+2420 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2445 512 Dia
+2642 532 Dia
+3779 2524 Dia
+5162 550 Dia
+2166 494 Dia
+2397 508 Dia
+2420 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2445 512 Dia
+2637 531 Dia
+3770 2433 Dia
+5113 559 Dia
+2171 494 Dia
+2398 508 Dia
+2420 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2444 512 Dia
+2632 530 Dia
+3761 2342 Dia
+5065 568 Dia
+2177 494 Dia
+2398 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2444 512 Dia
+2628 530 Dia
+3752 2253 Dia
+5019 579 Dia
+2183 495 Dia
+2399 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2443 512 Dia
+2623 529 Dia
+3742 2167 Dia
+4975 590 Dia
+2188 495 Dia
+2399 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2443 511 Dia
+2619 529 Dia
+3733 2082 Dia
+4932 602 Dia
+2193 495 Dia
+2400 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2442 511 Dia
+2614 528 Dia
+3722 2000 Dia
+4890 616 Dia
+2198 495 Dia
+2400 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2442 511 Dia
+2610 528 Dia
+3712 1920 Dia
+4850 631 Dia
+2204 496 Dia
+2401 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2441 511 Dia
+2606 527 Dia
+3701 1843 Dia
+4811 647 Dia
+2208 496 Dia
+2401 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2441 511 Dia
+2602 527 Dia
+3690 1768 Dia
+4774 665 Dia
+2213 496 Dia
+2402 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2441 511 Dia
+2598 526 Dia
+3679 1697 Dia
+4738 685 Dia
+2218 496 Dia
+2402 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2440 511 Dia
+2594 526 Dia
+3667 1628 Dia
+4704 706 Dia
+2223 497 Dia
+2403 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2440 511 Dia
+2590 525 Dia
+3655 1563 Dia
+4671 729 Dia
+2227 497 Dia
+2403 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2439 511 Dia
+2586 525 Dia
+3642 1500 Dia
+4639 754 Dia
+2232 497 Dia
+2404 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2439 511 Dia
+2582 525 Dia
+3629 1440 Dia
+4609 782 Dia
+2236 497 Dia
+2404 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2439 511 Dia
+2579 524 Dia
+3616 1384 Dia
+4580 811 Dia
+2240 498 Dia
+2405 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2438 511 Dia
+2575 524 Dia
+3602 1330 Dia
+4552 843 Dia
+2244 498 Dia
+2405 508 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2425 510 Dia
+2438 511 Dia
+2572 524 Dia
+3589 1280 Dia
+4525 878 Dia
+2248 498 Dia
+2405 509 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2438 511 Dia
+2569 523 Dia
+3574 1232 Dia
+4500 916 Dia
+2252 498 Dia
+2406 509 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2437 511 Dia
+2565 523 Dia
+3560 1187 Dia
+4475 956 Dia
+2256 499 Dia
+2406 509 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2437 511 Dia
+2562 523 Dia
+3545 1145 Dia
+4452 999 Dia
+2260 499 Dia
+2407 509 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2437 511 Dia
+2559 522 Dia
+3530 1106 Dia
+4430 1046 Dia
+886 464 Dia
+2264 499 Dia
+2407 509 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2436 511 Dia
+2556 522 Dia
+3515 1069 Dia
+4409 1095 Dia
+921 464 Dia
+2267 499 Dia
+2407 509 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2436 511 Dia
+2553 522 Dia
+3500 1034 Dia
+4388 1148 Dia
+954 464 Dia
+2271 499 Dia
+2408 509 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2436 511 Dia
+2550 521 Dia
+3484 1002 Dia
+4369 1204 Dia
+987 465 Dia
+2274 500 Dia
+2408 509 Dia
+2421 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2435 511 Dia
+2547 521 Dia
+3468 972 Dia
+4351 1264 Dia
+1019 465 Dia
+2277 500 Dia
+2408 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2435 511 Dia
+2544 521 Dia
+3452 944 Dia
+4334 1327 Dia
+1050 466 Dia
+2281 500 Dia
+2409 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2435 511 Dia
+2542 520 Dia
+3436 918 Dia
+4317 1393 Dia
+1080 466 Dia
+2284 500 Dia
+2409 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2435 511 Dia
+2539 520 Dia
+3420 893 Dia
+4301 1462 Dia
+1110 466 Dia
+2287 500 Dia
+2409 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2434 511 Dia
+2536 520 Dia
+3404 871 Dia
+4286 1535 Dia
+1140 467 Dia
+2290 501 Dia
+2410 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2434 511 Dia
+2534 520 Dia
+3388 849 Dia
+4272 1611 Dia
+1168 467 Dia
+2293 501 Dia
+2410 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2434 511 Dia
+2531 519 Dia
+3371 830 Dia
+4258 1690 Dia
+1196 467 Dia
+2296 501 Dia
+2410 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2434 511 Dia
+2529 519 Dia
+3355 812 Dia
+4245 1772 Dia
+1223 468 Dia
+2299 501 Dia
+2411 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2433 511 Dia
+2526 519 Dia
+3339 795 Dia
+4232 1857 Dia
+1250 468 Dia
+2302 501 Dia
+2411 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2433 511 Dia
+2524 519 Dia
+3323 779 Dia
+4221 1945 Dia
+1276 469 Dia
+2305 502 Dia
+2411 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2433 511 Dia
+2522 518 Dia
+3307 764 Dia
+4209 2035 Dia
+1302 469 Dia
+2307 502 Dia
+2411 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2433 511 Dia
+2519 518 Dia
+3291 750 Dia
+4198 2128 Dia
+1327 469 Dia
+2310 502 Dia
+2412 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2432 511 Dia
+2517 518 Dia
+3275 737 Dia
+4188 2223 Dia
+1351 470 Dia
+2312 502 Dia
+2412 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2432 511 Dia
+2515 518 Dia
+3259 726 Dia
+4178 2319 Dia
+1375 470 Dia
+2315 502 Dia
+2412 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2432 511 Dia
+2513 518 Dia
+3243 714 Dia
+4168 2418 Dia
+1398 471 Dia
+2317 502 Dia
+2412 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2432 511 Dia
+2511 517 Dia
+3228 704 Dia
+4159 2517 Dia
+1421 471 Dia
+2320 502 Dia
+2413 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2432 511 Dia
+2509 517 Dia
+3212 694 Dia
+4150 2618 Dia
+1444 471 Dia
+2322 503 Dia
+2413 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2431 511 Dia
+2507 517 Dia
+3197 685 Dia
+4141 2720 Dia
+1465 472 Dia
+2324 503 Dia
+2413 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2431 511 Dia
+2505 517 Dia
+3182 677 Dia
+4133 2822 Dia
+1487 472 Dia
+2327 503 Dia
+2413 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2431 511 Dia
+2503 517 Dia
+3167 669 Dia
+4125 2924 Dia
+1508 473 Dia
+2329 503 Dia
+2414 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2431 511 Dia
+2502 517 Dia
+3152 661 Dia
+4117 3026 Dia
+1528 473 Dia
+2331 503 Dia
+2414 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2431 510 Dia
+2500 516 Dia
+3138 654 Dia
+4110 3128 Dia
+1548 473 Dia
+2333 503 Dia
+2414 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2431 510 Dia
+2498 516 Dia
+3123 647 Dia
+4102 3229 Dia
+1567 474 Dia
+2335 504 Dia
+2414 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2430 510 Dia
+2496 516 Dia
+3109 641 Dia
+4095 3329 Dia
+1587 474 Dia
+2337 504 Dia
+2414 509 Dia
+2422 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 508 Dia
+2423 513 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2423 510 Dia
+2424 510 Dia
+2430 510 Dia
+2495 516 Dia
+3095 635 Dia
+4089 3428 Dia
+6678 4599 Dia
+1.000 UL
+LTb
+882 4872 N
+882 448 L
+6164 0 V
+0 4424 V
+-6164 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Symbol Helvetica
+%%Pages: 1

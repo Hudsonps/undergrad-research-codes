@@ -1,0 +1,89 @@
+#include <math.h>
+#include <iostream>
+#include <cstdlib>
+#include <limits.h>
+#include <float.h>
+#include <fstream>
+
+using namespace std;
+
+const double D = 1.0;
+const double LAMB = 3.0;
+
+const double K = 1000;
+const double DELTA = 2.0*D/K;
+
+const int N = 30;
+
+double sinal(double x)
+{
+  return sqrt(x*x)/x;
+}
+
+double reta(double ED, double ergaval)
+{
+  return ED - ergaval;
+}
+
+double Em(double m, double signal, double lamb)
+{
+    
+  return sinal(signal)* D*pow(lamb, -m);
+  //Nesta função, são considerados os casos de energia positivas E de negativas
+}
+
+double V(double E)
+{
+ return (0.5 + cos(0.5*M_PI*E/D));
+//return 0.05;
+}
+
+double Vred(double m, double signal, double lamb)
+{
+  double erg = Em(m, signal, lamb);
+
+  return sqrt(log(lamb)*V(erg)*V(erg)*sqrt(erg*erg));
+}
+
+double func1(double m, double signal, double ergaval, double lamb, double z)
+{
+  double erg = Em(m+z, signal, lamb);
+
+  double Vm = Vred(m+z, signal, lamb)/sqrt(2.0*D);
+
+  return Vm*Vm/(erg - ergaval);
+}
+
+double sumfunc1plushs(double ergaval, double lamb, double z)
+{
+  double somaplus = 0.0;
+
+  for(int m = 0; m <= N; m++)
+    {
+      somaplus = somaplus + func1(double(m), 1, ergaval, lamb, z);
+    }
+  return somaplus;
+}
+
+double sumfunc1minushs(double ergaval, double lamb, double z)
+{
+  double somaminus = 0.0;
+
+  for(int m = 0; m <= N; m++)
+    {
+      somaminus = somaminus + func1(double(m), -1, ergaval, lamb, z);
+    }
+  return somaminus;
+}
+
+int main(void)
+{
+  for (double z = -20; z <= 10; z++)
+  {
+    double soma = sumfunc1plushs(0.01, LAMB, z) + sumfunc1minushs(0.01, LAMB, z);
+    cout << z << "\t" << soma << "\t" << func1(0, 1, 0.01, LAMB, z) + func1(0, -1, 0.01, LAMB, z) << endl;
+  }
+}
+
+
+

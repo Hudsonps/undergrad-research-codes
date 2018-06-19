@@ -1,0 +1,14 @@
+set terminal postscript color enhanced dashed linewidth 4
+
+set output "work.eps"
+
+unset key
+
+set zeroaxis
+
+set yrange[-0.02 : 0.02]
+
+set xlabel "{/Symbol e}/{/Symbol D}"
+set ylabel "f({/Symbol e})"
+
+plot "work1.dat" w l ls 3,  "work2.dat" w l ls 4, "reta1" w l ls 0, "reta2" w l ls 0, "reta3" w l ls 0, "reta4" w l ls 0, "reta5" w l ls 0, "reta6" w l ls 0, "reta7" w l ls 0

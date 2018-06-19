@@ -1,0 +1,329 @@
+#include <math.h>
+#include <iostream>
+#include <cstdlib>
+#include <limits.h>
+#include <float.h>
+#include <fstream>
+
+using namespace std;
+
+const double D = 1.0;
+const double LAMB = 3.0;
+
+const double K = 1000;
+const double DELTA = 2.0*D/K;
+
+const int N = 40;
+
+
+double coefsimpson(int n)
+{
+  //baseado em qual termo se está na série de Simpson, esta função automaticamente determina o coeficiente multiplicativo
+  double coef;
+
+  if( (n%2) == 0)
+    {
+      coef = 4.0;
+    }
+
+  else
+    {
+      coef = 2.0;
+    }
+  return coef;
+}
+
+double reta(double ED, double ergaval)
+{
+  return ED - ergaval;
+}
+
+double sinal(double x)
+{
+  return sqrt(x*x)/x;
+}
+
+double Em(double m, double signal, double lamb)
+  {
+    
+    return sinal(signal)* D*pow(lamb, -m);
+    //Nesta função, são considerados os casos de energia positivas E de negativas
+  }
+
+double Ek(double k)
+{
+  return k*DELTA;
+}
+
+double V(double E)
+{
+ return sqrt(1.0 + sin(M_PI*(1.0000001 + E/D))/(M_PI*(1.0000001 + E/D)));
+//return 0.2;
+}
+
+double derV(double E)
+{
+  return 0.0;
+}
+
+double Vred(double m, double signal, double lamb)
+{
+  double erg = Em(m, signal, lamb);
+
+  return sqrt(log(lamb)*V(erg)*V(erg)*sqrt(erg*erg)/2.0);
+}
+
+double func1log(double m, double signal, double lamb, double ergaval, double z)
+{
+  double erg = Em(m+z, signal, lamb);
+
+  double Vm = Vred(m+z, signal, lamb);
+
+  return Vm*Vm/(erg - ergaval);
+}
+
+double func2log(double m, double signal, double lamb, double ergaval, double z)
+{
+  double erg = Em(m+z, signal, lamb);
+  
+  double Vm = Vred(m+z, signal, lamb);
+
+  return Vm*Vm/((erg - ergaval)*(erg - ergaval));
+}
+
+double func1lin(double k, double ergaval)
+{
+  double erg = Ek(k);
+  
+  double Vk = V(erg)*sqrt(DELTA)/sqrt(2.0*D);
+
+  return Vk*Vk/(erg - ergaval);
+}
+
+double residue1log(double ergaval, double lamb, double z)
+{
+  double s = - log(sqrt(ergaval*ergaval)/D)/log(lamb) - z;
+
+  return sinal(ergaval)*M_PI*V(ergaval)*V(ergaval)/(2.0*D*tan(M_PI*s));
+}
+
+double residue2log(double ergaval, double lamb, double z)
+{
+  double s = - log(sqrt(ergaval*ergaval)/D)/log(lamb) - z;
+
+  double parte1 = M_PI*2.0*V(ergaval)*derV(ergaval)/(2.0*D*tan(M_PI*s));
+
+  double parte2 = (ergaval/sqrt(ergaval*ergaval))*M_PI*M_PI*V(ergaval)*V(ergaval)/(sin(M_PI*s)*sin(M_PI*s)*2.0*D*ergaval*log(lamb));
+
+  return parte1 + parte2;
+}
+
+double residue1lin(double ergaval)
+{
+  double s = ergaval/DELTA;
+
+  return -M_PI*V(ergaval)*V(ergaval)/(2.0*D*tan(M_PI*s));
+}
+
+double sumfunc1plushs(double lamb, double ergaval, double z)
+{
+  double somaplus = 0.0;
+
+  for(int m = 0; m <= N; m++)
+    {
+      somaplus = somaplus + func1log(double(m), +1, lamb, ergaval, z);
+    }
+  return somaplus;
+}
+
+double sumfunc1minushs(double lamb, double ergaval, double z)
+{
+  double somaminus = 0.0;
+
+  for(int m = 0; m <= N; m++)
+    {
+      somaminus = somaminus + func1log(double(m), -1, lamb, ergaval, z);
+    }
+  return somaminus;
+}
+
+double sumfunc2plushs(double lamb, double ergaval, double z)
+{
+  double somaplus = 0.0;
+
+  for(int m = 0; m <= N; m++)
+    {
+      somaplus = somaplus + func2log(double(m), 1, lamb, ergaval, z);
+    }
+  return somaplus;
+}
+
+double sumfunc2minushs(double lamb, double ergaval, double z)
+{
+  double somaminus = 0.0;
+
+  for(int m = 0; m <= N; m++)
+    {
+      somaminus = somaminus + func2log(double(m), -1, lamb, ergaval, z);
+    }
+  return somaminus;
+}
+
+double sumfunc1lin(double ergaval)
+{
+  double soma = 0.0;
+
+  for(double k = -K/2; k <= K/2; k++)
+    {
+      soma = soma + func1lin(k, ergaval);
+    }
+  return soma;
+}
+
+
+double autoenergialog(double lamb, double z)
+{
+  double pequeno = 0.001;
+
+
+    ofstream autoenergia("autoenergialog.dat");
+      
+    for(double expoente = 0; D*pow(lamb, -expoente) >= 1e-5; expoente = expoente + pequeno)
+    {
+      
+      double epsilon = epsilon = D*pow(lamb, -expoente-z);
+
+      double soma = sumfunc1plushs(lamb, epsilon, z) + sumfunc1minushs(lamb, epsilon, z);
+      
+      if(soma*soma < 100.0)
+      {
+	double residue = residue1log(epsilon, lamb, z);
+	autoenergia << D*pow(lamb, -expoente) << "  " <<  soma <<  "  " <<  residue << "  " <<  (soma/residue) << "  " << (soma - residue) << endl;
+      }
+    }
+
+  return 0.0;
+}
+/*
+double comparelogb(void)
+{  
+  double pequeno = 0.001;
+
+  double eps;
+
+  double sum;
+  
+  double z = 0.0;
+
+  ofstream saida1r("residue1.dat");
+  
+  for(double expoente = 1; expoente <= 4; expoente = expoente + pequeno)
+    {
+      eps = D*pow(LAMB, -expoente);
+      
+      sum = residue1(eps, LAMB, z);
+      
+      if(sum*sum < 100.0)
+      {
+	saida1r << expoente << "\t" << sum << endl; //  << "\t" << (sumfunc1plushs(eps) + sumfunc1minushs(eps)) << "\t" << residue1(eps) << endl;
+      }
+    }
+
+  return 0.0;
+}
+
+double comparelogc(void)
+{
+  
+  double pequeno = 0.001;
+
+  double eps;
+
+  double sum;
+  
+  double z = 0.3;
+  
+  
+  for(double LAMB2 = 2; LAMB2 <= 10; LAMB2++)
+  {
+      int dlamb = int(10.*LAMB2);
+      char* nome = new char[10];
+      sprintf(nome, "dif%2d", dlamb);
+      ofstream dif1(nome);
+  
+  for(double expoente = 1; expoente <= 8; expoente = expoente + pequeno)
+    {
+      eps = D*pow(LAMB2, -expoente-z);
+      
+      sum = -(sumfunc1plushs(eps, LAMB2, z) + sumfunc1minushs(eps, LAMB2, z)) + residue1(eps, LAMB2, z);
+      
+      if(sum*sum < 100.0)
+      {
+	dif1 << expoente << "\t" << sum << endl; //  << "\t" << (sumfunc1plushs(eps) + sumfunc1minushs(eps)) << "\t" << residue1(eps) << endl;
+      }
+    }
+  }
+  return 0.0;
+}
+
+
+double comparelog2(void)
+{
+  double pequeno = 0.01;
+
+  double eps;
+
+  // ofstream saida("saida.dat");
+  
+  for(double expoente = 1; expoente <= 4; expoente = expoente + pequeno)
+    {
+      eps = D*pow(LAMB, -expoente);
+
+      cout << eps << "\t" << (sumfunc2plushs(eps, LAMB) + sumfunc2minushs(eps, LAMB)) - residue2(eps, LAMB)  << "\t" << (sumfunc2plushs(eps, LAMB) + sumfunc2minushs(eps, LAMB)) << "\t" << residue2(eps, LAMB) << endl;
+    }
+
+  return 0.0;
+}
+*/
+
+double autoenergialin(void)
+{
+    double pequeno = 5e-2;
+
+    ofstream linear("autoenergialin.dat");
+  for(double ss = 0; ss <= 500; ss = ss + pequeno)
+    {
+      double epsilon = ss*DELTA;
+      
+      double soma = sumfunc1lin(epsilon);
+      
+      if(soma*soma < 100)
+      {
+	double residue = residue1lin(epsilon);
+	linear << epsilon << "\t" << soma << "\t" << residue << "\t" << (soma/residue) << "\t" << soma - residue << endl;
+      }
+    }
+
+  return 0.0;
+}
+
+int main(void)
+{
+
+  autoenergialog(1.01, 0.);
+
+  autoenergialin();
+
+
+
+  //compareloga();
+  //comparelogb();
+  //comparelogc();
+ // work(-0.02, 0.02);
+
+}
+
+
+
+
+

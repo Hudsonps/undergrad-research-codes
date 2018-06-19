@@ -1,0 +1,7 @@
+set terminal pstricks
+
+set output "graph1.tex"
+
+set xlabel "$m$"
+unset key
+plot "soma1e.dat" ls 16 , "residue1e.dat" ls 10 

@@ -1,0 +1,8 @@
+dot: dot.o giv.o
+  g++ -o dot dot.o giv.o
+
+dot.o: dot.cc giv.cc giv.h
+  g++ -c dot.cc
+
+giv.o: giv.cc giv.h
+  g++ -c giv.cc

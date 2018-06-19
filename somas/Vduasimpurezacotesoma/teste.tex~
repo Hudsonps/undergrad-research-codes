@@ -1,0 +1,14 @@
+\documentclass[twocolumn]{revtex4}
+\usepackage[portuges]{babel}
+\usepackage[ps2pdf]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{pgf}
+
+\begin{document}
+ \begin{figure}
+\centering
+\input{graph1}
+\caption{Foo as a function of bar}
+\label{fig:foobar}
+\end{figure}
+\end{document}

@@ -1,0 +1,505 @@
+#include <cmath>
+#include <iostream>
+#include <cstdlib>
+#include <fstream>
+#include <iomanip>
+#include "giv.h"
+
+//Esse é o programa do sistema puro, sem impureza.
+
+//const double KB = 8.61734315e-5;
+const double KB = 1.;
+const double GAMMA = 1;
+const double EPS = 1e-14;
+
+using namespace std;
+
+int ind(int i, int j)  //Função que dá os índices de uma matriz em uma forma Hermitiana
+{
+  int m;
+
+  if (i >= j)
+    {
+      m = i*(i-1)/int(2) + j;
+    }
+
+  else
+    {
+      m = j*(j-1)/int(2) + i;
+      //Podemos trocar a ordem dos índices porque a matriz manipulada é Hermitiana.
+    }
+
+  return m;
+}
+
+double fatorial(int N)
+{
+  double product = 1.;
+  for(int i = N; i > 1; i--)
+  {
+    product = product * double(i);
+  }
+  
+  return product;
+}  
+
+double matrix_trace(double matrix[], int dim)
+{
+  double tr = 0;
+  for(int i = 1; i <= dim; i++)
+  {
+    tr = tr + matrix[ind(i, i)];
+  }
+ return tr;
+}
+    
+
+double binomial(double N, double m)
+{
+  return fatorial(int(N))/(fatorial(int(N-m)) * fatorial(int(m)) );
+}  
+  
+
+double number_of_states(int dim, int charge, int spin_z)
+{
+//Função utilizada para calcular o número de estados de um subespaço com carga e componente do spin no eixo z bem definidos.
+//dim: dimensão do problema sem considerar o spin, no espaço de 1 partícula. A dimensão real do problema de 1 partícula será 2*dim
+//charge: número de partículas presentes no sistema
+//spin_up: valor da componente z do spin. O usuário deve entrar o valor de 2*Sz, supondo que, para um elétron, Sz = +- 1/2.
+
+//Se os spins estivessem todos alinhados para cima, charge = Sz (fica subentendido o fator 2 multiplicando Sz).
+//A cada partícula com spin para baixo, este número deve ser reduzido de 2.
+                                   
+//Seja m o número de partículas com spin up
+//Seja n o número de partículas com spin down
+
+//m + n = Q
+//m - n = Sz
+
+//m = (Q+Sz)/2
+//n = (Q-Sz)/2
+
+double m = (charge + spin_z)/2.;
+double n = (charge - spin_z)/2.;
+
+  double product1 = binomial(double(dim), m);
+    
+  double product2 = binomial(double(dim), n);
+  
+  return product1*product2;
+}
+
+double partition_function(double avaltotal[], int dimtotal, double temp)
+{
+  double Z = 0;
+  for(int i = 1; i <= dimtotal; i++)
+  {
+    double aux = exp(-avaltotal[i]/(KB*temp));
+    if(aux > EPS)
+    {
+    Z = Z + aux;
+    }
+   
+  }
+  return Z;
+}
+
+double media_spin2(double spinz[], double avaltotal[], int dimtotal, double temp)
+{
+  double sum = 0;
+  for(int i = 1; i <= dimtotal; i++)
+  {
+    double aux = exp(-avaltotal[i]/(KB*temp));
+    if(aux > EPS)
+    {
+    sum = sum + aux*spinz[i]*spinz[i];
+    }
+    //cout << avaltotal[i] << "\t" << spinz[i] << endl;
+  }
+  
+  sum = sum/partition_function(avaltotal, dimtotal, temp);
+  return sum;
+}
+
+int main(void)
+{
+  for(double W = -5; W <= 5; W = W + 0.01)
+  {
+  double t = 1;
+  int dim = 3;  //dimensão do problema de 1 corpo
+  
+  int dim11 = int (number_of_states(dim, 1, 1));
+  int dim22 = int (number_of_states(dim, 2, 2));
+  int dim20 = int (number_of_states(dim, 2, 0));
+  int dim33 = int (number_of_states(dim, 3, 3));
+  int dim31 = int (number_of_states(dim, 3, 1));
+  int dim42 = int (number_of_states(dim, 4, 2));
+  int dim40 = int (number_of_states(dim, 4, 0));
+  int dim51 = int (number_of_states(dim, 5, 1));
+  int dim60 = int (number_of_states(dim, 6, 0));
+  
+  int dimtotal = 2*(dim11 + dim22 + dim33 + dim31  + dim42 + dim51) + (dim20 + dim40 + dim60) + 1;
+  //cout << "A dimensão total do sistema eh " << dimtotal << "." << endl;
+  
+  double *avaltotal = new double[dimtotal + 1];
+  
+  double *spinz = new double[dimtotal + 1];
+  //Cada autovalor tem um Spin_z correspondente, que será guardado nesta matriz.
+  
+  //Nas expressões acima, o primeiro índice indica a carga; o segundo índice indica 2*Spin_z.
+  
+  
+  double *H11 = new double[ind(dim11, dim11) + 1]; //Essa matriz guardará os elementos do Hamiltoniano.
+  double *aval11 = new double[int(dim11 + 1)]; //Essa matriz guardará os autovalores do Hamiltoniano.
+  double **avet11 = new double*[dim11+1];
+  for(int lin = 1; lin <= dim11; lin++)
+  {
+    avet11[lin] = new double[dim11+1];
+  }
+  
+  double *H22 = new double[ind(dim22, dim22) + 1]; //Essa matriz guardará os elementos do Hamiltoniano.
+  double *aval22 = new double[int(dim22 + 1)]; //Essa matriz guardará os autovalores do Hamiltoniano.
+  double **avet22 = new double*[dim22+1];
+  for(int lin = 1; lin <= dim22; lin++)
+  {
+    avet22[lin] = new double[dim22+1];
+  }
+  
+  double *H20 = new double[ind(dim20, dim20) + 1]; //Essa matriz guardará os elementos do Hamiltoniano.
+  double *aval20 = new double[int(dim20 + 1)]; //Essa matriz guardará os autovalores do Hamiltoniano.
+  double **avet20 = new double*[dim20+1];
+  for(int lin = 1; lin <= dim20; lin++)
+  {
+    avet20[lin] = new double[dim20+1];
+  }
+  
+  double *H33 = new double[ind(dim33, dim33) + 1]; //Essa matriz guardará os elementos do Hamiltoniano.
+  double *aval33 = new double[int(dim33 + 1)]; //Essa matriz guardará os autovalores do Hamiltoniano.
+  double **avet33 = new double*[dim33+1];
+  for(int lin = 1; lin <= dim33; lin++)
+  {
+    avet33[lin] = new double[dim33+1];
+  }
+  
+  double *H31 = new double[ind(dim31, dim31) + 1]; //Essa matriz guardará os elementos do Hamiltoniano.
+  double *aval31 = new double[int(dim31 + 1)]; //Essa matriz guardará os autovalores do Hamiltoniano.
+  double **avet31 = new double*[dim31+1];
+  for(int lin = 1; lin <= dim31; lin++)
+  {
+    avet31[lin] = new double[dim31+1];
+  }
+  
+  double *H42 = new double[ind(dim42, dim42) + 1]; //Essa matriz guardará os elementos do Hamiltoniano.
+  double *aval42 = new double[int(dim42 + 1)]; //Essa matriz guardará os autovalores do Hamiltoniano.
+  double **avet42 = new double*[dim42+1];
+  for(int lin = 1; lin <= dim42; lin++)
+  {
+    avet42[lin] = new double[dim42+1];
+  }
+  
+  double *H40 = new double[ind(dim40, dim40) + 1]; //Essa matriz guardará os elementos do Hamiltoniano.
+  double *aval40 = new double[int(dim40 + 1)]; //Essa matriz guardará os autovalores do Hamiltoniano.
+  double **avet40 = new double*[dim40+1];
+  for(int lin = 1; lin <= dim40; lin++)
+  {
+    avet40[lin] = new double[dim40+1];
+  }
+
+  double *H51 = new double[ind(dim51, dim51) + 1]; //Essa matriz guardará os elementos do Hamiltoniano.
+  double *aval51 = new double[int(dim51 + 1)]; //Essa matriz guardará os autovalores do Hamiltoniano.
+  double **avet51 = new double*[dim51+1];
+  for(int lin = 1; lin <= dim51; lin++)
+  {
+    avet51[lin] = new double[dim51+1];
+  }
+  
+  double *H60 = new double[ind(dim60, dim60) + 1]; //Essa matriz guardará os elementos do Hamiltoniano.
+  double *aval60 = new double[int(dim60 + 1)]; //Essa matriz guardará os autovalores do Hamiltoniano.
+  double **avet60 = new double*[dim60+1];
+  for(int lin = 1; lin <= dim60; lin++)
+  {
+    avet60[lin] = new double[dim60+1];
+  }
+
+H11[ind(1, 1)] = 0; 
+H11[ind(1, 2)] = t; 
+H11[ind(1, 3)] = 0; 
+H11[ind(2, 2)] = 0; 
+H11[ind(2, 3)] = t; 
+H11[ind(3, 3)] = W; 
+
+H22[ind(1, 1)] = 0; 
+H22[ind(1, 2)] = t; 
+H22[ind(1, 3)] = 0; 
+H22[ind(2, 2)] = W; 
+H22[ind(2, 3)] = t; 
+H22[ind(3, 3)] = W; 
+
+H20[ind(1, 1)] = 0; 
+H20[ind(1, 2)] = t; 
+H20[ind(1, 3)] = 0; 
+H20[ind(1, 4)] = t; 
+H20[ind(1, 5)] = 0; 
+H20[ind(1, 6)] = 0; 
+H20[ind(1, 7)] = 0; 
+H20[ind(1, 8)] = 0; 
+H20[ind(1, 9)] = 0; 
+H20[ind(2, 2)] = 0; 
+H20[ind(2, 3)] = t; 
+H20[ind(2, 4)] = 0; 
+H20[ind(2, 5)] = t; 
+H20[ind(2, 6)] = 0; 
+H20[ind(2, 7)] = 0; 
+H20[ind(2, 8)] = 0; 
+H20[ind(2, 9)] = 0; 
+H20[ind(3, 3)] = W; 
+H20[ind(3, 4)] = 0; 
+H20[ind(3, 5)] = 0; 
+H20[ind(3, 6)] = t; 
+H20[ind(3, 7)] = 0; 
+H20[ind(3, 8)] = 0; 
+H20[ind(3, 9)] = 0; 
+H20[ind(4, 4)] = 0; 
+H20[ind(4, 5)] = t; 
+H20[ind(4, 6)] = 0; 
+H20[ind(4, 7)] = t; 
+H20[ind(4, 8)] = 0; 
+H20[ind(4, 9)] = 0; 
+H20[ind(5, 5)] = 0; 
+H20[ind(5, 6)] = t; 
+H20[ind(5, 7)] = 0; 
+H20[ind(5, 8)] = t; 
+H20[ind(5, 9)] = 0; 
+H20[ind(6, 6)] = W; 
+H20[ind(6, 7)] = 0; 
+H20[ind(6, 8)] = 0; 
+H20[ind(6, 9)] = t; 
+H20[ind(7, 7)] = W; 
+H20[ind(7, 8)] = t; 
+H20[ind(7, 9)] = 0; 
+H20[ind(8, 8)] = W; 
+H20[ind(8, 9)] = t; 
+H20[ind(9, 9)] = 2*W; 
+
+H33[ind(1, 1)] = W; 
+
+H31[ind(1, 1)] = 0; 
+H31[ind(1, 2)] = t; 
+H31[ind(1, 3)] = 0; 
+H31[ind(1, 4)] = t; 
+H31[ind(1, 5)] = 0; 
+H31[ind(1, 6)] = 0; 
+H31[ind(1, 7)] = 0; 
+H31[ind(1, 8)] = 0; 
+H31[ind(1, 9)] = 0; 
+H31[ind(2, 2)] = 0; 
+H31[ind(2, 3)] = t; 
+H31[ind(2, 4)] = 0; 
+H31[ind(2, 5)] = t; 
+H31[ind(2, 6)] = 0; 
+H31[ind(2, 7)] = 0; 
+H31[ind(2, 8)] = 0; 
+H31[ind(2, 9)] = 0; 
+H31[ind(3, 3)] = W; 
+H31[ind(3, 4)] = 0; 
+H31[ind(3, 5)] = 0; 
+H31[ind(3, 6)] = t; 
+H31[ind(3, 7)] = 0; 
+H31[ind(3, 8)] = 0; 
+H31[ind(3, 9)] = 0; 
+H31[ind(4, 4)] = W; 
+H31[ind(4, 5)] = t; 
+H31[ind(4, 6)] = 0; 
+H31[ind(4, 7)] = t; 
+H31[ind(4, 8)] = 0; 
+H31[ind(4, 9)] = 0; 
+H31[ind(5, 5)] = W; 
+H31[ind(5, 6)] = t; 
+H31[ind(5, 7)] = 0; 
+H31[ind(5, 8)] = t; 
+H31[ind(5, 9)] = 0; 
+H31[ind(6, 6)] = 2*W; 
+H31[ind(6, 7)] = 0; 
+H31[ind(6, 8)] = 0; 
+H31[ind(6, 9)] = t; 
+H31[ind(7, 7)] = W; 
+H31[ind(7, 8)] = t; 
+H31[ind(7, 9)] = 0; 
+H31[ind(8, 8)] = W; 
+H31[ind(8, 9)] = t; 
+H31[ind(9, 9)] = 2*W; 
+
+H42[ind(1, 1)] = W; 
+H42[ind(1, 2)] = t; 
+H42[ind(1, 3)] = 0; 
+H42[ind(2, 2)] = W; 
+H42[ind(2, 3)] = t; 
+H42[ind(3, 3)] = 2*W; 
+
+H40[ind(1, 1)] = 0; 
+H40[ind(1, 2)] = t; 
+H40[ind(1, 3)] = 0; 
+H40[ind(1, 4)] = t; 
+H40[ind(1, 5)] = 0; 
+H40[ind(1, 6)] = 0; 
+H40[ind(1, 7)] = 0; 
+H40[ind(1, 8)] = 0; 
+H40[ind(1, 9)] = 0; 
+H40[ind(2, 2)] = W; 
+H40[ind(2, 3)] = t; 
+H40[ind(2, 4)] = 0; 
+H40[ind(2, 5)] = t; 
+H40[ind(2, 6)] = 0; 
+H40[ind(2, 7)] = 0; 
+H40[ind(2, 8)] = 0; 
+H40[ind(2, 9)] = 0; 
+H40[ind(3, 3)] = W; 
+H40[ind(3, 4)] = 0; 
+H40[ind(3, 5)] = 0; 
+H40[ind(3, 6)] = t; 
+H40[ind(3, 7)] = 0; 
+H40[ind(3, 8)] = 0; 
+H40[ind(3, 9)] = 0; 
+H40[ind(4, 4)] = W; 
+H40[ind(4, 5)] = t; 
+H40[ind(4, 6)] = 0; 
+H40[ind(4, 7)] = t; 
+H40[ind(4, 8)] = 0; 
+H40[ind(4, 9)] = 0; 
+H40[ind(5, 5)] = 2*W; 
+H40[ind(5, 6)] = t; 
+H40[ind(5, 7)] = 0; 
+H40[ind(5, 8)] = t; 
+H40[ind(5, 9)] = 0; 
+H40[ind(6, 6)] = 2*W; 
+H40[ind(6, 7)] = 0; 
+H40[ind(6, 8)] = 0; 
+H40[ind(6, 9)] = t; 
+H40[ind(7, 7)] = W; 
+H40[ind(7, 8)] = t; 
+H40[ind(7, 9)] = 0; 
+H40[ind(8, 8)] = 2*W; 
+H40[ind(8, 9)] = t; 
+H40[ind(9, 9)] = 2*W; 
+
+H51[ind(1, 1)] = W; 
+H51[ind(1, 2)] = t; 
+H51[ind(1, 3)] = 0; 
+H51[ind(2, 2)] = 2*W; 
+H51[ind(2, 3)] = t; 
+H51[ind(3, 3)] = 2*W; 
+
+H60[ind(1, 1)] = 2*W;
+
+  givens(dim11, dim11, dim11, H11, aval11, avet11);
+  givens(dim22, dim22, dim22, H22, aval22, avet22);
+  givens(dim20, dim20, dim20, H20, aval20, avet20);
+  givens(dim33, dim33, dim33, H33, aval33, avet33);
+  givens(dim31, dim31, dim31, H31, aval31, avet31);
+  givens(dim42, dim42, dim42, H42, aval42, avet42);
+  givens(dim40, dim40, dim40, H40, aval40, avet40);
+  givens(dim51, dim51, dim51, H51, aval51, avet51);
+  givens(dim60, dim60, dim60, H60, aval60, avet60);
+
+  avaltotal[1] = 0;
+  spinz[1] = 0;
+  
+  int inttotal = 2;
+  for(int i = 1; i <= dim11; i = i+1)
+  {
+    avaltotal[inttotal] = aval11[i];
+    avaltotal[inttotal+1] = aval11[i];
+    spinz[inttotal] = 1./2.;
+    spinz[inttotal+1] = -1./2.;
+    inttotal = inttotal + 2;
+  }
+  
+  for(int i = 1; i <= dim22; i = i+1)
+  {
+    avaltotal[inttotal] = aval22[i];
+    avaltotal[inttotal+1] = aval22[i];
+    spinz[inttotal] = 2./2.;
+    spinz[inttotal+1] = -2./2.;
+    inttotal = inttotal + 2;
+  }
+  
+  for(int i = 1; i <= dim33; i = i+1)
+  {
+    avaltotal[inttotal] = aval33[i];
+    avaltotal[inttotal+1] = aval33[i];
+    spinz[inttotal] = 3./2.;
+    spinz[inttotal+1] = -3./2.;
+    inttotal = inttotal + 2;
+  }
+  
+  for(int i = 1; i <= dim31; i = i+1)
+  {
+    avaltotal[inttotal] = aval31[i];
+    avaltotal[inttotal+1] = aval31[i];
+    spinz[inttotal] = 1./2.;
+    spinz[inttotal+1] = -1./2.;
+    inttotal = inttotal + 2;
+  }
+  
+  for(int i = 1; i <= dim42; i = i+1)
+  {
+    avaltotal[inttotal] = aval42[i];
+    avaltotal[inttotal+1] = aval42[i];
+    spinz[inttotal] = 2./2.;
+    spinz[inttotal+1] = -2./2.;
+    inttotal = inttotal + 2;
+  }
+
+  for(int i = 1; i <= dim51; i = i+1)
+  {
+    avaltotal[inttotal] = aval51[i];
+    avaltotal[inttotal+1] = aval51[i];
+    spinz[inttotal] = 1./2.;
+    spinz[inttotal+1] = -1./2.;
+    inttotal = inttotal + 2;
+  }
+
+  for(int i = 1; i <= dim20; i = i+1)
+  {
+    avaltotal[inttotal] = aval20[i];
+    spinz[inttotal] = 0;
+    inttotal = inttotal + 1;
+  }
+  
+  for(int i = 1; i <= dim40; i = i+1)
+  {
+    avaltotal[inttotal] = aval40[i];
+    spinz[inttotal] = 0;
+    inttotal = inttotal + 1;
+  }
+  
+  for(int i = 1; i <= dim60; i = i+1)
+  {
+    avaltotal[inttotal] = aval60[i];
+    spinz[inttotal] = 0;
+    inttotal = inttotal + 1;
+  }
+  
+  
+  const int MAXCHAR = 100;
+  char nome[MAXCHAR];
+  
+  sprintf(nome, "mag_suscept%.2f.plt", W);
+  
+  ofstream mag_suscept(nome);
+  
+  
+  
+  for(double temp = 0.006; temp <= 5; temp = temp + 0.001)
+  {
+  double magnetic_suscept = media_spin2(spinz, avaltotal, dimtotal, temp);
+  //cout << partition_function(avaltotal, dimtotal, temp) << endl;
+  
+  mag_suscept << temp << "\t" << magnetic_suscept << endl;
+  }
+  
+  }
+
+}
+
+

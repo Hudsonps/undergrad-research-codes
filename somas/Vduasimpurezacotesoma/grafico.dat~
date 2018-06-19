@@ -1,0 +1,6 @@
+set terminal postscript color dashed enhanced
+
+set output "graph1.ps"
+
+set xlabel "m"
+plot "soma1e.dat" ls 16 title , "residue1e.dat" ls 8 title 

@@ -1,0 +1,8 @@
+set terminal postscript color dashed enhanced
+
+set output "dif1.ps"
+
+set xlabel "m"
+set ylabel "{/Symbol x}({/Symbol e})
+unset key
+plot "diferenca1.dat" w l ls -1
